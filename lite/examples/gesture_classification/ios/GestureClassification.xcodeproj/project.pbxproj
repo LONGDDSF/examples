@@ -23,9 +23,11 @@
 		AAA8CE7A2183A10A0049BD23 /* InferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA8CE782183A10A0049BD23 /* InferenceViewController.swift */; };
 		AAA8CE7D2183A1120049BD23 /* CurvedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA8CE7C2183A1120049BD23 /* CurvedView.swift */; };
 		AAEA2D2F218746C800930A1D /* display_labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = AAEA2D2E218746C800930A1D /* display_labels.txt */; };
+		F54AB272C8A7CCC0C016F1AA /* Pods_GestureClassification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2477E90A0B8D505A372C4D8 /* Pods_GestureClassification.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7ADFA7BB34CED836F688053F /* Pods-GestureClassification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestureClassification.debug.xcconfig"; path = "Target Support Files/Pods-GestureClassification/Pods-GestureClassification.debug.xcconfig"; sourceTree = "<group>"; };
 		AA0F2AEE219408430077CDCB /* model.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = model.tflite; path = ../../../../../../../../Downloads/model.tflite; sourceTree = "<group>"; };
 		AA0F2AEF219408430077CDCB /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = labels.txt; path = ../../../../../../../../Downloads/labels.txt; sourceTree = "<group>"; };
 		AA8474292183A31D0097B995 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
@@ -44,6 +46,8 @@
 		AAA8CE782183A10A0049BD23 /* InferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InferenceViewController.swift; sourceTree = "<group>"; };
 		AAA8CE7C2183A1120049BD23 /* CurvedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurvedView.swift; sourceTree = "<group>"; };
 		AAEA2D2E218746C800930A1D /* display_labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = display_labels.txt; sourceTree = "<group>"; };
+		E2477E90A0B8D505A372C4D8 /* Pods_GestureClassification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GestureClassification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFF16D0453640BEEB1D195A5 /* Pods-GestureClassification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestureClassification.release.xcconfig"; path = "Target Support Files/Pods-GestureClassification/Pods-GestureClassification.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +55,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F54AB272C8A7CCC0C016F1AA /* Pods_GestureClassification.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2922952345129710D190D39F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7ADFA7BB34CED836F688053F /* Pods-GestureClassification.debug.xcconfig */,
+				FFF16D0453640BEEB1D195A5 /* Pods-GestureClassification.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AAA8CE3F21839F720049BD23 = {
 			isa = PBXGroup;
 			children = (
 				AAA8CE4A21839F720049BD23 /* GestureClassification */,
 				AAA8CE4921839F720049BD23 /* Products */,
+				2922952345129710D190D39F /* Pods */,
+				BB94AF8BAAC7EF59E1EE663A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +169,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		BB94AF8BAAC7EF59E1EE663A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2477E90A0B8D505A372C4D8 /* Pods_GestureClassification.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,6 +184,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAA8CE5A21839F740049BD23 /* Build configuration list for PBXNativeTarget "GestureClassification" */;
 			buildPhases = (
+				4D6875516D3A404CC42E17E8 /* [CP] Check Pods Manifest.lock */,
 				AAA8CE4421839F720049BD23 /* Sources */,
 				AAA8CE4521839F720049BD23 /* Frameworks */,
 				AAA8CE4621839F720049BD23 /* Resources */,
@@ -222,6 +247,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D6875516D3A404CC42E17E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GestureClassification-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AAA8CE4421839F720049BD23 /* Sources */ = {
@@ -381,11 +431,12 @@
 		};
 		AAA8CE5B21839F740049BD23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ADFA7BB34CED836F688053F /* Pods-GestureClassification.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ECEY5MLVMM;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"'${SRCROOT}/Pods/TensorFlowLite/Frameworks/tensorflow_lite.framework/Headers'",
@@ -398,7 +449,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.tensorflow.GestureClassification;
+				PRODUCT_BUNDLE_IDENTIFIER = org.tensorflow.GestureClassification.cdd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -409,11 +460,12 @@
 		};
 		AAA8CE5C21839F740049BD23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFF16D0453640BEEB1D195A5 /* Pods-GestureClassification.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ECEY5MLVMM;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"'${SRCROOT}/Pods/TensorFlowLite/Frameworks/tensorflow_lite.framework/Headers'",
@@ -426,7 +478,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.tensorflow.GestureClassification;
+				PRODUCT_BUNDLE_IDENTIFIER = org.tensorflow.GestureClassification.cdd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;

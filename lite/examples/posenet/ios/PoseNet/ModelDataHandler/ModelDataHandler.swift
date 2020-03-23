@@ -388,6 +388,7 @@ typealias FileInfo = (name: String, extension: String)
 enum Model {
   static let file: FileInfo = (
     name: "posenet_mobilenet_v1_100_257x257_multi_kpt_stripped", extension: "tflite"
+//    name:"multi_person_mobilenet_v1_075_float", extension: "tflite"
   )
 
   static let input = (batchSize: 1, height: 257, width: 257, channelSize: 3)
