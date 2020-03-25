@@ -19,6 +19,7 @@ class HeroScene: SKScene {
     var fistNode: SKSpriteNode!
     var floorNode:SKSpriteNode!
     var score: NSInteger = 0
+    var enemyTexture:SKTexture = SKTexture(imageNamed: "hero")
     
     override func didMove(to view: SKView) {
         
@@ -33,7 +34,7 @@ class HeroScene: SKScene {
         repeatEnemy()
     
     }
-    /// MARK: 场景设置
+    // MARK: 场景设置
     func setupScene() {
 //        self.backgroundColor = SKColor(red: 80.0/255.0, green: 192.0/255.0, blue: 203.0/255.0, alpha: 1.0)
         self.backgroundColor = SKColor.clear
@@ -41,7 +42,7 @@ class HeroScene: SKScene {
         self.physicsWorld.contactDelegate = self
     }
     
-    /// MARK: 分数
+    // MARK: 分数
     lazy var scoreLabelNode:SKLabelNode = {
         let label = SKLabelNode(fontNamed: "MarkerFelt-Wide")
         label.zPosition = 100
@@ -61,9 +62,9 @@ class HeroScene: SKScene {
         scoreLabelNode.text = "\(score)" + "分"
     }
     
-    /// MARK: 添加敌人
+    // MARK: 添加敌人
     func addEnemy() {
-        let enemy = SKSpriteNode(texture: SKTexture(imageNamed: "hero"))
+        let enemy = SKSpriteNode(texture: enemyTexture)
         enemy.size = CGSize(width: 60, height: 60)
         
         // 出现位置横坐标随机
@@ -91,7 +92,7 @@ class HeroScene: SKScene {
         run(SKAction.repeatForever(SKAction.sequence([actionAddEnemy,actionWaitNextEnemy])))
     }
     
-    /// MARK: 添加拳头
+    // MARK: 添加拳头
     func addfistNode() {
         fistNode = SKSpriteNode(texture: SKTexture(imageNamed: "fist"))
         fistNode.size = CGSize(width: 40, height: 40)
@@ -108,15 +109,20 @@ class HeroScene: SKScene {
     }
     
     //MARK:爆炸效果
+    lazy var exploreTexturesArray:[SKTexture] = {
+         let explodeAtlas = SKTextureAtlas.init(named: "exploded")
+          let allTextureArray = NSMutableArray.init(capacity: 16)
+          for i in 0..<explodeAtlas.textureNames.count - 10 {
+              let textureName = String(format: "%d@2x.png", arguments: [i+1])
+              let texture = explodeAtlas.textureNamed(textureName)
+              allTextureArray.add(texture)
+          }
+        return allTextureArray as! [SKTexture]
+    }()
+    
     func explode(point:CGPoint) {
-        let explodeAtlas = SKTextureAtlas.init(named: "exploded")
-        let allTextureArray = NSMutableArray.init(capacity: 16)
-        for i in 0..<explodeAtlas.textureNames.count {
-            let textureName = String(format: "%d@2x.png", arguments: [i+1])
-            let texture = explodeAtlas.textureNamed(textureName)
-            allTextureArray.add(texture)
-        }
-        let bombNode = SKSpriteNode(texture: allTextureArray[0] as? SKTexture)
+  
+        let bombNode = SKSpriteNode(texture: exploreTexturesArray[0])
         bombNode.position = point
         bombNode.name = "bomb"
         bombNode.size = CGSize(width: 50, height: 50)
@@ -124,17 +130,30 @@ class HeroScene: SKScene {
         self.addChild(bombNode)
         
         //爆炸效果动画
-        let animationAction = SKAction.animate(with: allTextureArray as! [SKTexture], timePerFrame: 0.05)
-        let sound = Music()
+        let animationAction = SKAction.animate(with: exploreTexturesArray, timePerFrame: 0.05)
+        let player = explodedSound
         let soundAction = SKAction.run {
-            sound.bomb()
+            player.play()
         }
         bombNode.run(SKAction.group([animationAction,soundAction])) {
             bombNode.removeFromParent()
         }
     }
     
-    /// MARK: 地板
+    //MARK: 声音
+    lazy var explodedSound:AVAudioPlayer = {
+        var player : AVAudioPlayer?
+        let mp3Path = Bundle.main.path(forResource: "bomb", ofType: "mp3")
+        let pathURL = NSURL.fileURL(withPath: mp3Path!)
+        do {
+            try player = AVAudioPlayer(contentsOf: pathURL)
+        } catch {
+            print(error)
+        }
+        return player!
+    }()
+
+    // MARK: 地板
     func addFloor(){
         floorNode = SKSpriteNode(imageNamed:"hero")
         floorNode.position = CGPoint(x: 0, y: 0)
