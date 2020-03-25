@@ -109,7 +109,7 @@ class ViewController: UIViewController {
     super.viewWillAppear(animated)
 
     cameraCapture.checkCameraConfigurationAndStartSession()
-    setupScene()
+//    setupScene()
   }
 
   override func viewWillDisappear(_ animated: Bool) {
@@ -124,11 +124,11 @@ class ViewController: UIViewController {
     func setupScene() {
         // Present the scene
         sceneView = HeroSKView()
-        sceneView.frame = CGRect(x: 0, y: 0, width: previewView.frame.size.width, height: previewView.frame.size.height)
-
+//        sceneView.frame = CGRect(x: 0, y: 0, width: previewView.frame.size.width, height: previewView.frame.size.height)
+        sceneView.frame = previewView.frame
     //        sceneView.frame = CGRect(x: 0, y: 0, width: 768, height: 912)
         
-        previewView.addSubview(sceneView)
+        view.addSubview(sceneView)
         
         sceneView.setup()
         

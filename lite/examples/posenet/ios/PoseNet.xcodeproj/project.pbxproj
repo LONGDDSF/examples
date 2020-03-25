@@ -27,7 +27,6 @@
 		84FCF5922387BD7900663812 /* tfl_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 84FCF5912387BD7900663812 /* tfl_logo.png */; };
 		C0170D102428C92D0094FA29 /* basketball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0170D072428C92D0094FA29 /* basketball@2x.png */; };
 		C0170D112428C92D0094FA29 /* hero@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0170D082428C92D0094FA29 /* hero@2x.png */; };
-		C0170D122428C92D0094FA29 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0170D092428C92D0094FA29 /* Music.swift */; };
 		C0170D132428C92D0094FA29 /* fist@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0170D0A2428C92D0094FA29 /* fist@2x.png */; };
 		C0170D142428C92D0094FA29 /* HeroSKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0170D0B2428C92D0094FA29 /* HeroSKView.swift */; };
 		C0170D152428C92D0094FA29 /* basketry@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0170D0C2428C92D0094FA29 /* basketry@2x.png */; };
@@ -61,7 +60,6 @@
 		C0170D052428C6490094FA29 /* multi_person_mobilenet_v1_075_float.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = multi_person_mobilenet_v1_075_float.tflite; sourceTree = "<group>"; };
 		C0170D072428C92D0094FA29 /* basketball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basketball@2x.png"; sourceTree = "<group>"; };
 		C0170D082428C92D0094FA29 /* hero@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hero@2x.png"; sourceTree = "<group>"; };
-		C0170D092428C92D0094FA29 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		C0170D0A2428C92D0094FA29 /* fist@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fist@2x.png"; sourceTree = "<group>"; };
 		C0170D0B2428C92D0094FA29 /* HeroSKView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroSKView.swift; sourceTree = "<group>"; };
 		C0170D0C2428C92D0094FA29 /* basketry@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basketry@2x.png"; sourceTree = "<group>"; };
@@ -222,15 +220,14 @@
 		C0170D062428C92D0094FA29 /* SpriteHero */ = {
 			isa = PBXGroup;
 			children = (
-				C0170D072428C92D0094FA29 /* basketball@2x.png */,
-				C0170D082428C92D0094FA29 /* hero@2x.png */,
-				C0170D092428C92D0094FA29 /* Music.swift */,
-				C0170D0A2428C92D0094FA29 /* fist@2x.png */,
-				C0170D0B2428C92D0094FA29 /* HeroSKView.swift */,
-				C0170D0C2428C92D0094FA29 /* basketry@2x.png */,
-				C0170D0D2428C92D0094FA29 /* bomb.mp3 */,
 				C0170D0E2428C92D0094FA29 /* exploded.atlas */,
+				C0170D0D2428C92D0094FA29 /* bomb.mp3 */,
+				C0170D072428C92D0094FA29 /* basketball@2x.png */,
+				C0170D0C2428C92D0094FA29 /* basketry@2x.png */,
+				C0170D0A2428C92D0094FA29 /* fist@2x.png */,
+				C0170D082428C92D0094FA29 /* hero@2x.png */,
 				C0170D0F2428C92D0094FA29 /* HeroScene.swift */,
+				C0170D0B2428C92D0094FA29 /* HeroSKView.swift */,
 			);
 			path = SpriteHero;
 			sourceTree = "<group>";
@@ -373,7 +370,6 @@
 				8474FEC92341D36E00377D34 /* PreviewView.swift in Sources */,
 				84952CB5236186BE0052C104 /* CVPixelBufferExtension.swift in Sources */,
 				840ECB20238BAA2300C7D88A /* InfoCell.swift in Sources */,
-				C0170D122428C92D0094FA29 /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
