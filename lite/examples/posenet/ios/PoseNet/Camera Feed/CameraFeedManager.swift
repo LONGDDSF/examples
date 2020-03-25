@@ -190,7 +190,7 @@ class CameraFeedManager: NSObject {
   private func addVideoDeviceInput() -> Bool {
     /// Tries to get the default back camera.
     guard
-      let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)
+      let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front)
       else {
         fatalError("Cannot find camera")
     }

@@ -127,7 +127,7 @@ class HeroScene: SKScene {
         bombNode.name = "bomb"
         bombNode.size = CGSize(width: 50, height: 50)
         bombNode.zPosition = 2.0
-        self.addChild(bombNode)
+        addChild(bombNode)
         
         //爆炸效果动画
         let animationAction = SKAction.animate(with: exploreTexturesArray, timePerFrame: 0.05)

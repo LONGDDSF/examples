@@ -17,7 +17,6 @@
 		846BAF7623E7FE13006FC136 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BAF7523E7FE13006FC136 /* Constants.swift */; };
 		8474FEC92341D36E00377D34 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474FEC82341D36E00377D34 /* PreviewView.swift */; };
 		8474FECB2341D39800377D34 /* CameraFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474FECA2341D39800377D34 /* CameraFeedManager.swift */; };
-		848842A42370183E0043FC4C /* posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 848842A32370183E0043FC4C /* posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite */; };
 		84952CB5236186BE0052C104 /* CVPixelBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84952CB4236186BE0052C104 /* CVPixelBufferExtension.swift */; };
 		84952CB92361874A0052C104 /* TFLiteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84952CB82361874A0052C104 /* TFLiteExtension.swift */; };
 		84B67CEF2326338300A11A08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B67CEE2326338300A11A08 /* AppDelegate.swift */; };
@@ -33,6 +32,7 @@
 		C0170D162428C92D0094FA29 /* bomb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0170D0D2428C92D0094FA29 /* bomb.mp3 */; };
 		C0170D172428C92D0094FA29 /* exploded.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C0170D0E2428C92D0094FA29 /* exploded.atlas */; };
 		C0170D182428C92D0094FA29 /* HeroScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0170D0F2428C92D0094FA29 /* HeroScene.swift */; };
+		C0170D1A242B05010094FA29 /* posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite in Resources */ = {isa = PBXBuildFile; fileRef = C0170D19242B05010094FA29 /* posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +46,6 @@
 		8474FEC82341D36E00377D34 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		8474FECA2341D39800377D34 /* CameraFeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeedManager.swift; sourceTree = "<group>"; };
 		84884291236FF0A30043FC4C /* download_models.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = download_models.sh; sourceTree = "<group>"; };
-		848842A32370183E0043FC4C /* posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite; sourceTree = "<group>"; };
 		84952CB4236186BE0052C104 /* CVPixelBufferExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtension.swift; sourceTree = "<group>"; };
 		84952CB82361874A0052C104 /* TFLiteExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFLiteExtension.swift; sourceTree = "<group>"; };
 		84B67CEB2326338300A11A08 /* PoseNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoseNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +56,6 @@
 		84D6576C2387BB7E0048171E /* CGSizeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSizeExtension.swift; sourceTree = "<group>"; };
 		84FCF5912387BD7900663812 /* tfl_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tfl_logo.png; path = Assets.xcassets/tfl_logo.png; sourceTree = "<group>"; };
 		A1CE41C09920CCEC31985547 /* Pods_PoseNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoseNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0170D052428C6490094FA29 /* multi_person_mobilenet_v1_075_float.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = multi_person_mobilenet_v1_075_float.tflite; sourceTree = "<group>"; };
 		C0170D072428C92D0094FA29 /* basketball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basketball@2x.png"; sourceTree = "<group>"; };
 		C0170D082428C92D0094FA29 /* hero@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hero@2x.png"; sourceTree = "<group>"; };
 		C0170D0A2428C92D0094FA29 /* fist@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fist@2x.png"; sourceTree = "<group>"; };
@@ -66,6 +64,7 @@
 		C0170D0D2428C92D0094FA29 /* bomb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bomb.mp3; sourceTree = "<group>"; };
 		C0170D0E2428C92D0094FA29 /* exploded.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = exploded.atlas; sourceTree = "<group>"; };
 		C0170D0F2428C92D0094FA29 /* HeroScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroScene.swift; sourceTree = "<group>"; };
+		C0170D19242B05010094FA29 /* posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite; sourceTree = "<group>"; };
 		D2BFF06D0AE9137D332447F3 /* Pods-PoseNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoseNet.release.xcconfig"; path = "Target Support Files/Pods-PoseNet/Pods-PoseNet.release.xcconfig"; sourceTree = "<group>"; };
 		FCA88463911267B1001A596F /* Pods-PoseNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoseNet.debug.xcconfig"; path = "Target Support Files/Pods-PoseNet/Pods-PoseNet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,8 +133,7 @@
 		848842A22370180C0043FC4C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				848842A32370183E0043FC4C /* posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite */,
-				C0170D052428C6490094FA29 /* multi_person_mobilenet_v1_075_float.tflite */,
+				C0170D19242B05010094FA29 /* posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,6 +293,7 @@
 				8402440123D9834600704ABD /* README.md in Resources */,
 				C0170D152428C92D0094FA29 /* basketry@2x.png in Resources */,
 				C0170D132428C92D0094FA29 /* fist@2x.png in Resources */,
+				C0170D1A242B05010094FA29 /* posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite in Resources */,
 				C0170D102428C92D0094FA29 /* basketball@2x.png in Resources */,
 				840EDD022341DE380017ED42 /* Main.storyboard in Resources */,
 				C0170D162428C92D0094FA29 /* bomb.mp3 in Resources */,
@@ -303,7 +302,6 @@
 				84FCF5922387BD7900663812 /* tfl_logo.png in Resources */,
 				84B67CF62326338400A11A08 /* Assets.xcassets in Resources */,
 				C0170D112428C92D0094FA29 /* hero@2x.png in Resources */,
-				848842A42370183E0043FC4C /* posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

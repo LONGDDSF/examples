@@ -19,7 +19,9 @@ class OverlayView: UIView {
 
   var dots = [CGPoint]()
   var lines = [Line]()
-
+    
+  var isFlip:Bool = false
+    
   override func draw(_ rect: CGRect) {
     for dot in dots {
       drawDot(of: dot)
@@ -30,8 +32,9 @@ class OverlayView: UIView {
   }
 
   func drawDot(of dot: CGPoint) {
+    let xxx = isFlip ? self.frame.size.width - dot.x : dot.x
     let dotRect = CGRect(
-      x: dot.x - Traits.dot.radius / 2, y: dot.y - Traits.dot.radius / 2,
+      x: xxx - Traits.dot.radius / 2, y: dot.y - Traits.dot.radius / 2,
       width: Traits.dot.radius, height: Traits.dot.radius)
     let dotPath = UIBezierPath(ovalIn: dotRect)
 
@@ -41,8 +44,11 @@ class OverlayView: UIView {
 
   func drawLine(of line: Line) {
     let linePath = UIBezierPath()
-    linePath.move(to: CGPoint(x: line.from.x, y: line.from.y))
-    linePath.addLine(to: CGPoint(x: line.to.x, y: line.to.y))
+    let x_from = isFlip ? self.frame.size.width - line.from.x : line.from.x
+    let x_to = isFlip ? self.frame.size.width - line.to.x : line.to.x
+
+    linePath.move(to: CGPoint(x: x_from, y: line.from.y))
+    linePath.addLine(to: CGPoint(x: x_to, y: line.to.y))
     linePath.close()
 
     linePath.lineWidth = Traits.line.width

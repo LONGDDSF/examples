@@ -109,12 +109,16 @@ class ViewController: UIViewController {
     super.viewWillAppear(animated)
 
     cameraCapture.checkCameraConfigurationAndStartSession()
-//    setupScene()
   }
 
   override func viewWillDisappear(_ animated: Bool) {
     cameraCapture.stopSession()
   }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupScene()
+    }
 
   override func viewDidLayoutSubviews() {
     overlayViewFrame = overlayView.frame
@@ -124,9 +128,8 @@ class ViewController: UIViewController {
     func setupScene() {
         // Present the scene
         sceneView = HeroSKView()
-//        sceneView.frame = CGRect(x: 0, y: 0, width: previewView.frame.size.width, height: previewView.frame.size.height)
+        
         sceneView.frame = previewView.frame
-    //        sceneView.frame = CGRect(x: 0, y: 0, width: 768, height: 912)
         
         view.addSubview(sceneView)
         
@@ -284,9 +287,13 @@ extension ViewController: CameraFeedManagerDelegate {
         self.clearResult()
         return
       }
+         
+      self.overlayView.isFlip = true
+        
       self.drawResult(of: result)
       
-        let p = result.dots[9]
+        var p = result.dots[9]
+        p = self.overlayView.isFlip ? CGPoint(x: self.overlayView.frame.size.width - p.x, y: p.y) : p
         let ppp = self.overlayView.convert(p, to: self.overlayView.window )
         
         self.gameDelegate?.poseDidCheckedPosion(leftWrist: ppp, rightWrist: p, referView: self.overlayView.window ?? UIWindow())
