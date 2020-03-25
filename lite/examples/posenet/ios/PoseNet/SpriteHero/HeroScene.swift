@@ -127,6 +127,7 @@ class HeroScene: SKScene {
         bombNode.name = "bomb"
         bombNode.size = CGSize(width: 50, height: 50)
         bombNode.zPosition = 2.0
+
         addChild(bombNode)
         
         //爆炸效果动画

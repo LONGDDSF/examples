@@ -109,6 +109,7 @@ class ViewController: UIViewController {
     super.viewWillAppear(animated)
 
     cameraCapture.checkCameraConfigurationAndStartSession()
+//    setupScene()
   }
 
   override func viewWillDisappear(_ animated: Bool) {
@@ -130,6 +131,7 @@ class ViewController: UIViewController {
         sceneView = HeroSKView()
         
         sceneView.frame = previewView.frame
+
         
         view.addSubview(sceneView)
         
@@ -292,6 +294,7 @@ extension ViewController: CameraFeedManagerDelegate {
         
       self.drawResult(of: result)
       
+
         var p = result.dots[9]
         p = self.overlayView.isFlip ? CGPoint(x: self.overlayView.frame.size.width - p.x, y: p.y) : p
         let ppp = self.overlayView.convert(p, to: self.overlayView.window )
