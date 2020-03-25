@@ -16,6 +16,10 @@ import AVFoundation
 import UIKit
 import os
 
+public protocol PosePosionDelegate: class {
+    func poseDidCheckedPosion(leftWrist:CGPoint, rightWrist:CGPoint, referView:UIWindow)
+}
+
 class ViewController: UIViewController {
   // MARK: Storyboards Connections
   @IBOutlet weak var previewView: PreviewView!
@@ -55,6 +59,9 @@ class ViewController: UIViewController {
   // Handles all data preprocessing and makes calls to run inference.
   private var modelDataHandler: ModelDataHandler?
 
+    private var sceneView: HeroSKView!
+    public weak var gameDelegate: PosePosionDelegate?
+    
   // MARK: View Handling Methods
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -102,6 +109,7 @@ class ViewController: UIViewController {
     super.viewWillAppear(animated)
 
     cameraCapture.checkCameraConfigurationAndStartSession()
+//    setupScene()
   }
 
   override func viewWillDisappear(_ animated: Bool) {
@@ -113,6 +121,20 @@ class ViewController: UIViewController {
     previewViewFrame = previewView.frame
   }
 
+    func setupScene() {
+        // Present the scene
+        sceneView = HeroSKView()
+//        sceneView.frame = CGRect(x: 0, y: 0, width: previewView.frame.size.width, height: previewView.frame.size.height)
+        sceneView.frame = previewView.frame
+    //        sceneView.frame = CGRect(x: 0, y: 0, width: 768, height: 912)
+        
+        view.addSubview(sceneView)
+        
+        sceneView.setup()
+        
+        gameDelegate = sceneView
+    }
+    
   // MARK: Button Actions
   @IBAction func didChangeThreadCount(_ sender: UIStepper) {
     let changedCount = Int(sender.value)
@@ -236,6 +258,7 @@ extension ViewController: CameraFeedManagerDelegate {
     // from `previewView` to `pixelBuffer`. `previewView` area is transformed to fit in
     // `pixelBuffer`, because `pixelBuffer` as a camera output is resized to fill `previewView`.
     // https://developer.apple.com/documentation/avfoundation/avlayervideogravity/1385607-resizeaspectfill
+    
     let modelInputRange = overlayViewFrame.applying(
       previewViewFrame.size.transformKeepAspect(toFitIn: pixelBuffer.size))
 
@@ -262,6 +285,11 @@ extension ViewController: CameraFeedManagerDelegate {
         return
       }
       self.drawResult(of: result)
+      
+        let p = result.dots[9]
+        let ppp = self.overlayView.convert(p, to: self.overlayView.window )
+        
+        self.gameDelegate?.poseDidCheckedPosion(leftWrist: ppp, rightWrist: p, referView: self.overlayView.window ?? UIWindow())
     }
   }
 

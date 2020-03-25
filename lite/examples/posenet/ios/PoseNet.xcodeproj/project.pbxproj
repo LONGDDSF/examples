@@ -25,6 +25,14 @@
 		84B67CF62326338400A11A08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B67CF52326338400A11A08 /* Assets.xcassets */; };
 		84D6576D2387BB7E0048171E /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6576C2387BB7E0048171E /* CGSizeExtension.swift */; };
 		84FCF5922387BD7900663812 /* tfl_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 84FCF5912387BD7900663812 /* tfl_logo.png */; };
+		C0170D102428C92D0094FA29 /* basketball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0170D072428C92D0094FA29 /* basketball@2x.png */; };
+		C0170D112428C92D0094FA29 /* hero@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0170D082428C92D0094FA29 /* hero@2x.png */; };
+		C0170D132428C92D0094FA29 /* fist@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0170D0A2428C92D0094FA29 /* fist@2x.png */; };
+		C0170D142428C92D0094FA29 /* HeroSKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0170D0B2428C92D0094FA29 /* HeroSKView.swift */; };
+		C0170D152428C92D0094FA29 /* basketry@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0170D0C2428C92D0094FA29 /* basketry@2x.png */; };
+		C0170D162428C92D0094FA29 /* bomb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0170D0D2428C92D0094FA29 /* bomb.mp3 */; };
+		C0170D172428C92D0094FA29 /* exploded.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C0170D0E2428C92D0094FA29 /* exploded.atlas */; };
+		C0170D182428C92D0094FA29 /* HeroScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0170D0F2428C92D0094FA29 /* HeroScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +57,15 @@
 		84D6576C2387BB7E0048171E /* CGSizeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSizeExtension.swift; sourceTree = "<group>"; };
 		84FCF5912387BD7900663812 /* tfl_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tfl_logo.png; path = Assets.xcassets/tfl_logo.png; sourceTree = "<group>"; };
 		A1CE41C09920CCEC31985547 /* Pods_PoseNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoseNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0170D052428C6490094FA29 /* multi_person_mobilenet_v1_075_float.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = multi_person_mobilenet_v1_075_float.tflite; sourceTree = "<group>"; };
+		C0170D072428C92D0094FA29 /* basketball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basketball@2x.png"; sourceTree = "<group>"; };
+		C0170D082428C92D0094FA29 /* hero@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hero@2x.png"; sourceTree = "<group>"; };
+		C0170D0A2428C92D0094FA29 /* fist@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fist@2x.png"; sourceTree = "<group>"; };
+		C0170D0B2428C92D0094FA29 /* HeroSKView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroSKView.swift; sourceTree = "<group>"; };
+		C0170D0C2428C92D0094FA29 /* basketry@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basketry@2x.png"; sourceTree = "<group>"; };
+		C0170D0D2428C92D0094FA29 /* bomb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bomb.mp3; sourceTree = "<group>"; };
+		C0170D0E2428C92D0094FA29 /* exploded.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = exploded.atlas; sourceTree = "<group>"; };
+		C0170D0F2428C92D0094FA29 /* HeroScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroScene.swift; sourceTree = "<group>"; };
 		D2BFF06D0AE9137D332447F3 /* Pods-PoseNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoseNet.release.xcconfig"; path = "Target Support Files/Pods-PoseNet/Pods-PoseNet.release.xcconfig"; sourceTree = "<group>"; };
 		FCA88463911267B1001A596F /* Pods-PoseNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoseNet.debug.xcconfig"; path = "Target Support Files/Pods-PoseNet/Pods-PoseNet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				848842A32370183E0043FC4C /* posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite */,
+				C0170D052428C6490094FA29 /* multi_person_mobilenet_v1_075_float.tflite */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +173,7 @@
 		84B67CED2326338300A11A08 /* PoseNet */ = {
 			isa = PBXGroup;
 			children = (
+				C0170D062428C92D0094FA29 /* SpriteHero */,
 				840ECB1E238BAA0D00C7D88A /* Cells */,
 				842DDB6C2372A80E00F6BB94 /* Views */,
 				848842A22370180C0043FC4C /* Model */,
@@ -196,6 +215,21 @@
 				D2BFF06D0AE9137D332447F3 /* Pods-PoseNet.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C0170D062428C92D0094FA29 /* SpriteHero */ = {
+			isa = PBXGroup;
+			children = (
+				C0170D0E2428C92D0094FA29 /* exploded.atlas */,
+				C0170D0D2428C92D0094FA29 /* bomb.mp3 */,
+				C0170D072428C92D0094FA29 /* basketball@2x.png */,
+				C0170D0C2428C92D0094FA29 /* basketry@2x.png */,
+				C0170D0A2428C92D0094FA29 /* fist@2x.png */,
+				C0170D082428C92D0094FA29 /* hero@2x.png */,
+				C0170D0F2428C92D0094FA29 /* HeroScene.swift */,
+				C0170D0B2428C92D0094FA29 /* HeroSKView.swift */,
+			);
+			path = SpriteHero;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,10 +293,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8402440123D9834600704ABD /* README.md in Resources */,
+				C0170D152428C92D0094FA29 /* basketry@2x.png in Resources */,
+				C0170D132428C92D0094FA29 /* fist@2x.png in Resources */,
+				C0170D102428C92D0094FA29 /* basketball@2x.png in Resources */,
 				840EDD022341DE380017ED42 /* Main.storyboard in Resources */,
+				C0170D162428C92D0094FA29 /* bomb.mp3 in Resources */,
+				C0170D172428C92D0094FA29 /* exploded.atlas in Resources */,
 				840EDCFD2341DDD30017ED42 /* Launch Screen.storyboard in Resources */,
 				84FCF5922387BD7900663812 /* tfl_logo.png in Resources */,
 				84B67CF62326338400A11A08 /* Assets.xcassets in Resources */,
+				C0170D112428C92D0094FA29 /* hero@2x.png in Resources */,
 				848842A42370183E0043FC4C /* posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,9 +361,11 @@
 				846BAF7623E7FE13006FC136 /* Constants.swift in Sources */,
 				84952CB92361874A0052C104 /* TFLiteExtension.swift in Sources */,
 				84D6576D2387BB7E0048171E /* CGSizeExtension.swift in Sources */,
+				C0170D182428C92D0094FA29 /* HeroScene.swift in Sources */,
 				84B67CF12326338300A11A08 /* ViewController.swift in Sources */,
 				84B67CEF2326338300A11A08 /* AppDelegate.swift in Sources */,
 				8474FECB2341D39800377D34 /* CameraFeedManager.swift in Sources */,
+				C0170D142428C92D0094FA29 /* HeroSKView.swift in Sources */,
 				846499C2235DAB0D009CBBC7 /* ModelDataHandler.swift in Sources */,
 				8474FEC92341D36E00377D34 /* PreviewView.swift in Sources */,
 				84952CB5236186BE0052C104 /* CVPixelBufferExtension.swift in Sources */,
@@ -476,12 +518,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ECEY5MLVMM;
 				INFOPLIST_FILE = PoseNet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.tensorflow.PoseNet;
+				PRODUCT_BUNDLE_IDENTIFIER = org.tensorflow.PoseNet.cdd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -496,12 +539,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ECEY5MLVMM;
 				INFOPLIST_FILE = PoseNet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.tensorflow.PoseNet;
+				PRODUCT_BUNDLE_IDENTIFIER = org.tensorflow.PoseNet.cdd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
